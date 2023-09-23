@@ -1,4 +1,4 @@
-package toscale_validator
+package validator
 
 import (
 	"slices"
