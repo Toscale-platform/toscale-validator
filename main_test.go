@@ -32,3 +32,15 @@ func TestIsSymbolWith(t *testing.T) {
 		t.Error("Expected true, got false")
 	}
 }
+
+func TestIsBuyerMakerStr(t *testing.T) {
+	if !IsBuyerMakerStr("buy") {
+		t.Error("Expected true, got false")
+	}
+}
+
+func TestIsBuyerMakerOC(t *testing.T) {
+	if !IsBuyerMakerOC(2.0, 3.0) {
+		t.Error("Expected true, got false")
+	}
+}

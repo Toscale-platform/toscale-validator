@@ -46,3 +46,11 @@ func IsSymbolWith(symbol, separator string) bool {
 
 	return true
 }
+
+func IsBuyerMakerStr(side string) bool {
+	return side == "buy"
+}
+
+func IsBuyerMakerOC(open, close float64) bool {
+	return !(open > close)
+}
