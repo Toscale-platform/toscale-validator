@@ -2,6 +2,16 @@ package validator
 
 import "testing"
 
+func TestIs(t *testing.T) {
+	if !Is("ABC", []string{"ABC", "DEF"}) {
+		t.Error("Expected true, got false")
+	}
+
+	if Is("NOO", []string{"ABC", "DEF"}) {
+		t.Error("Expected false, got true")
+	}
+}
+
 func TestIsExchange(t *testing.T) {
 	if !IsExchange("binance") {
 		t.Error("Expected true, got false")

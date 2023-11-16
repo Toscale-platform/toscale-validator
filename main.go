@@ -11,6 +11,16 @@ func InitExchangeList(e []string) {
 	exchanges = e
 }
 
+func Is(s string, slice []string) bool {
+	for _, el := range slice {
+		if el == s {
+			return true
+		}
+	}
+
+	return false
+}
+
 func IsExchange(exchange string) bool {
 	return IsExchangeWith(exchange, exchanges)
 }
